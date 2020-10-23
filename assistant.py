@@ -19,7 +19,7 @@ def record_audio(ask=False):
         try:
             voice_data = r.recognize_google(audio)
         except sr.UnknownValueError:
-            borg_speak('Sorry I didnt get that')
+            borg_speak('Sorry I did not get that')
         except sr.RequestError:
             borg_speak('Sorry my speech service is down')
         return voice_data
